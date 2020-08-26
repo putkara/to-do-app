@@ -10,6 +10,7 @@ class App  extends  React.Component{
     super(props)
     this.state = {
       items: [
+        /*
         {id:0, text:"Wash my Cat",done: false},
         {id:1,text:"Do my work",done: false},
         {id:2,text:"Pay my rent",done: false},
@@ -18,6 +19,7 @@ class App  extends  React.Component{
         {id:5,text:"Go to LITTLE BIG concert",done: true},
         {id:6,text:"Get a job",done: true},
         {id:7,text:"Feed cats",done: true},
+        */
       ]
 
     }
@@ -41,6 +43,14 @@ updateItem=(id)=>{
 
 }
 
+deleteItem=(id)=>{
+  const updatedItems = this.state.items.filter(item=>item.id !== id)
+
+  this.setState({
+    items:updatedItems
+  })
+}
+
 AddItem=(IputText)=>{
   const item={
     id:this.state.items.length,
@@ -59,8 +69,8 @@ render(){
   return (
     <div  className="app">
     <Navigaton/>
-    <ToDosContainer updateItemsProps={this.updateItem} toDosProps={toDos} AddItemsProps={this.AddItem}/>
-    <ToDanesContainer updateItemsProps={this.updateItem} toDonesProps={toDones}/>
+    <ToDosContainer deleteItemProps= {this.deleteItem} updateItemsProps={this.updateItem} toDosProps={toDos} AddItemsProps={this.AddItem}/>
+    <ToDanesContainer deleteItemProps= {this.deleteItem} updateItemsProps={this.updateItem} toDonesProps={toDones}/>
     </div>
   );
 }

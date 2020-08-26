@@ -6,6 +6,7 @@ export default function ToDoItem(props) {
             <p>{props.taskProps.text}</p>
             <div className="action">
                 <button className="btn" onClick={()=>props.updateItemsProps(props.taskProps.id)}> &#10004;</button>
+                <button className="btn" onClick={()=>props.deleteItemProps(props.taskProps.id)}> X </button>
             </div>
 </div>
     )

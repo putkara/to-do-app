@@ -7,7 +7,7 @@ export default function ToDanesContainer(props) {
 
 const ToDanesItems = props.toDonesProps.map((task)=>{
     return(
-      <TodanItem key={task.id} updateItemsProps={props.updateItemsProps}  taskProps={task}/>
+      <TodanItem key={task.id} updateItemsProps={props.updateItemsProps}  taskProps={task}  deleteItemProps={props.deleteItemProps} />
     );
  });
 
