@@ -9,9 +9,13 @@ export default class ToDosContainer extends  React.Component{
       
   formSubmitted=(e)=>{
     e.preventDefault()
+    if(this.state.InputText.trim() !=="" && this.state.InputText.length <100){
     this.props.AddItemsProps(this.state.InputText)
 }
-
+this.setState({
+    InputText:""
+  })
+}
   
 
 
@@ -22,7 +26,7 @@ export default class ToDosContainer extends  React.Component{
 
 const todosItems =this.props.toDosProps.map(task=>{
     return(
-       <ToDoItem key={task.id} updateItemsProps={this.props.updateItemsProps} taskProps={task}/>
+       <ToDoItem key={task.id} updateItemsProps={this.props.updateItemsProps} taskProps={task} deleteItemProps={this.props.deleteItemProps}/>
     );
  })
 
