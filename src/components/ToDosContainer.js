@@ -1,29 +1,36 @@
 import React from 'react'
+import ToDoItem from './ToDoItem';
 
-export default function ToDosContainer() {
+export default class ToDosContainer extends  React.Component{ 
+  
+    state = {
+        InputText:"",
+      }
+      
+  formSubmitted=(e)=>{
+    e.preventDefault()
+    this.props.AddItemsProps(this.state.InputText)
+}
 
-const todos= [
-    {text:"Wash my face",done: false},
-    {text:"Do my work",done: false},
-    {text:"Pay my rent",done: false},
-    {text:"Walk the Dog",done: false},
-]
-const todosItems =todos.map(task=>{
+  
+
+
+      
+  
+    render()  {
+
+
+const todosItems =this.props.toDosProps.map(task=>{
     return(
-        <div className="todo-item">
-            <p>{task.text}</p>
-            <div className="action">
-                <button className="btn"> &#10004;</button>
-            </div>
-</div>
+       <ToDoItem key={task.id} updateItemsProps={this.props.updateItemsProps} taskProps={task}/>
     );
  })
 
     return (
         <div className='todos-container'>
-            <form className="todo-form">
+            <form className="todo-form" onSubmit={this.formSubmitted}>
                 <label className='input-item'>
-                    <input type='text' name='todo'/>
+                    <input type='text' name='todo' onChange={e=>this.setState({InputText:e.target.value})}/>
                 </label>
              <input type="submit" className="btn" value="ADD"/>
             </form>
@@ -34,4 +41,5 @@ const todosItems =todos.map(task=>{
 </div>
 
 )
+}
 }
