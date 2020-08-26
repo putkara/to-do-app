@@ -1,22 +1,13 @@
 import React from 'react'
+import TodanItem from './TodanItem';
 
-export default function ToDanesContainer() {
+export default function ToDanesContainer(props) {
 
-const todanes = [
-    {text:"Creat a App",done: true},
-    {text:"Do not my work",done: true},
-    {text:"Get a job",done: true},
-    {text:"Feed cats",done: true},
-];
 
-const ToDanesItems = todanes.map((task)=>{
+
+const ToDanesItems = props.toDonesProps.map((task)=>{
     return(
-        <div className="todones-item">
-            <p>{task.text}</p>
-            <div className="action">
-                <button className="btn"> &#8635;</button>
-            </div>
-</div>
+      <TodanItem key={task.id} updateItemsProps={props.updateItemsProps}  taskProps={task}/>
     );
  });
 
@@ -27,3 +18,5 @@ const ToDanesItems = todanes.map((task)=>{
         </div>
     )
 }
+
+

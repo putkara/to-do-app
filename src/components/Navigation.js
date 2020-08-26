@@ -5,7 +5,7 @@ const Navigation=()=> {
     return (
         <nav>
             <div class="left">
-<img src={logo} alt="logo"/>
+                <img src={logo} alt="logo"/>
             </div>
 
             <div class="right">
