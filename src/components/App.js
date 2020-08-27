@@ -24,6 +24,20 @@ class App  extends  React.Component{
 
     }
   }
+//for fesh deta it will exeqiut only once
+componentDidMount(){
+  //get data stored in localStorage
+  let storeditems = localStorage.getItem("to-do-app")
+  //c
+  let ConvertedToOriginal = JSON.parse(storeditems)
+
+  if(storeditems !== null){
+  this.setState({
+    items:ConvertedToOriginal
+  });
+}
+}
+
  
 updateItem=(id)=>{
   const updateItems = this.state.items.map(
@@ -39,7 +53,10 @@ updateItem=(id)=>{
     items:updateItems
       
     
+  },()=>{
+    localStorage.setItem("to-do-app",JSON.stringify(this.state.items))
   })
+
 
 }
 
@@ -48,6 +65,8 @@ deleteItem=(id)=>{
 
   this.setState({
     items:updatedItems
+  },()=>{
+    localStorage.setItem("to-do-app",JSON.stringify(this.state.items))
   })
 }
 
@@ -59,6 +78,9 @@ AddItem=(IputText)=>{
   }
   this.setState({
     items:[item, ...this.state.items]
+  },()=>{
+    //string state items into localStorage
+    localStorage.setItem("to-do-app",JSON.stringify(this.state.items))
   })
 
 }
