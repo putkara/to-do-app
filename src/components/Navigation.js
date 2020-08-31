@@ -1,15 +1,16 @@
 import React from 'react'
 import logo from "../image/logo.png"
-
+import {Link} from "react-router-dom"
 const Navigation=()=> {
     return (
         <nav>
             <div class="left">
-                <img src={logo} alt="logo"/>
+                <Link to="/"><img src={logo} alt="logo"/></Link>
+                
             </div>
 
             <div class="right">
-                <a href="#">HELP</a>
+                <Link to="/help">HELP</Link>
             </div>
         </nav>
     )
