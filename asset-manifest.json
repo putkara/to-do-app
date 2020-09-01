@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/putkara/to-do-app/static/css/main.5d67a9a3.chunk.css",
-    "main.js": "/putkara/to-do-app/static/js/main.91a979c8.chunk.js",
-    "main.js.map": "/putkara/to-do-app/static/js/main.91a979c8.chunk.js.map",
-    "runtime-main.js": "/putkara/to-do-app/static/js/runtime-main.292d1eef.js",
-    "runtime-main.js.map": "/putkara/to-do-app/static/js/runtime-main.292d1eef.js.map",
-    "static/js/2.ded14748.chunk.js": "/putkara/to-do-app/static/js/2.ded14748.chunk.js",
-    "static/js/2.ded14748.chunk.js.map": "/putkara/to-do-app/static/js/2.ded14748.chunk.js.map",
-    "index.html": "/putkara/to-do-app/index.html",
-    "precache-manifest.06cd0862feaf9c4a18794938987d0a3e.js": "/putkara/to-do-app/precache-manifest.06cd0862feaf9c4a18794938987d0a3e.js",
-    "service-worker.js": "/putkara/to-do-app/service-worker.js",
-    "static/css/main.5d67a9a3.chunk.css.map": "/putkara/to-do-app/static/css/main.5d67a9a3.chunk.css.map",
-    "static/js/2.ded14748.chunk.js.LICENSE.txt": "/putkara/to-do-app/static/js/2.ded14748.chunk.js.LICENSE.txt",
-    "static/media/error-404.jpg": "/putkara/to-do-app/static/media/error-404.b560172c.jpg"
+    "main.css": "./static/css/main.5d67a9a3.chunk.css",
+    "main.js": "./static/js/main.91a979c8.chunk.js",
+    "main.js.map": "./static/js/main.91a979c8.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.84878c42.js",
+    "runtime-main.js.map": "./static/js/runtime-main.84878c42.js.map",
+    "static/js/2.ded14748.chunk.js": "./static/js/2.ded14748.chunk.js",
+    "static/js/2.ded14748.chunk.js.map": "./static/js/2.ded14748.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.23b1c78bd73828f7eef8ea456c21da98.js": "./precache-manifest.23b1c78bd73828f7eef8ea456c21da98.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.5d67a9a3.chunk.css.map": "./static/css/main.5d67a9a3.chunk.css.map",
+    "static/js/2.ded14748.chunk.js.LICENSE.txt": "./static/js/2.ded14748.chunk.js.LICENSE.txt",
+    "static/media/error-404.jpg": "./static/media/error-404.b560172c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.292d1eef.js",
+    "static/js/runtime-main.84878c42.js",
     "static/js/2.ded14748.chunk.js",
     "static/css/main.5d67a9a3.chunk.css",
     "static/js/main.91a979c8.chunk.js"
