@@ -4,12 +4,12 @@ import {Link} from "react-router-dom"
 const Navigation=()=> {
     return (
         <nav>
-            <div class="left">
+            <div className="left">
                 <Link to="/"><img src={logo} alt="logo"/></Link>
                 
             </div>
 
-            <div class="right">
+            <div className="right">
                 <Link to="/help">HELP</Link>
             </div>
         </nav>
